@@ -3219,7 +3219,7 @@ BO_ 2020 LSS_S: 8 Vector__XXX
 BO_ 1 GFC: 0 Vector__XXX
 
 BO_ 392 N8_TPDO0: 5 LVSS
- SG_ Throttle : 18|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Throttle : 18|16@1- (1,0) [-32768|32767] "" Vector__XXX
  SG_ Start : 17|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Brake : 1|16@1- (1,0) [0|494967295] "" Vector__XXX
  SG_ Forward_Enable : 0|1@1+ (1,0) [0|494967295] "" Vector__XXX

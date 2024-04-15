@@ -33,25 +33,44 @@ NS_ :
 
 BS_:
 
-BU_: VirtualNMTMaster LVSS
+BU_: VirtualNMTMaster VCU
 
 
-BO_ 1800 HBGuard_008: 1 LVSS
+BO_ 1800 HBGuard_008: 1 VCU
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1416 SSDO_008: 8 LVSS
+BO_ 1416 SSDO_008: 8 VCU
+ SG_ Harp_Bit_3_6002_03 m3 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Harp_Bit_2_6002_02 m2 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Harp_Bit_1_6002_01 m1 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Harp_Bit_0_6002_00 m0 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SubIndex_6002 m24578M : 24|8@1+ (1,0) [0|3] "" Vector__XXX
  SG_ Throttle_6001_03 m3 : 32|16@1- (1,0) [-32768|32767] "" Vector__XXX
  SG_ Start_6001_02 m2 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Brake_6001_01 m1 : 32|16@1- (1,0) [0|494967295] "" Vector__XXX
  SG_ Forward_Enable_6001_00 m0 : 32|1@1+ (1,0) [0|494967295] "" Vector__XXX
  SG_ SubIndex_6001 m24577M : 24|8@1+ (1,0) [0|3] "" Vector__XXX
  SG_ Transmit_PDO_Mapping_Parameter_0 m4 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
- SG_ Transmit_PDO_Mapping_Parame_0000 m3 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ PDOMapEntry_1A01_03 m3 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ PDOMapEntry_1A01_02 m2 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ PDOMapEntry_1A01_01 m1 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ NrOfEntries_1_1A01_00 m0 : 32|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ SubIndex_1A01 m6657M : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ Transmit_PDO_Mapping_Parame_0000 m4 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ Transmit_PDO_Mapping_Parame_0001 m3 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
  SG_ PDOMapEntry_2_1A00_02 m2 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
  SG_ PDOMapEntry_1_1A00_01 m1 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
  SG_ NrOfEntries_1_1A00_00 m0 : 32|8@1+ (1,0) [0|2] "" Vector__XXX
  SG_ SubIndex_1A00 m6656M : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ SYNC_start_value_1801_06 m6 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Event_Timer_1801_05 m5 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Compatibility_Entry_1801_04 m4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Inhibit_Time_1801_03 m3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ TransmissionType_1801_02 m2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ COB_ID_1801_01 m1 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ Highest_sub_index_supported_1801 m0 : 32|8@1+ (1,0) [2|6] "" Vector__XXX
+ SG_ SubIndex_1801 m6145M : 24|8@1+ (1,0) [0|6] "" Vector__XXX
  SG_ SYNC_start_value_1800_06 m6 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ Event_Timer_1800_05 m5 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ Compatibility_Entry_1800_04 m4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
@@ -70,49 +89,68 @@ BO_ 1416 SSDO_008: 8 LVSS
  SG_ SubIndex_1001 m4097M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Device_Type_1000 m0 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
  SG_ SubIndex_1000 m4096M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Index m1M : 8|16@1+ (1,0) [4096|24577] "" Vector__XXX
+ SG_ Index m1M : 8|16@1+ (1,0) [4096|24578] "" Vector__XXX
  SG_ TransferType m1M : 1|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ NotUsedBytes m1 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
  SG_ SizeIndicator m1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ SCS M : 5|3@1+ (1,0) [0|6] "" Vector__XXX
 
 BO_ 1544 CSDO_008: 8 Vector__XXX
- SG_ Throttle_6001_03 m3 : 32|16@1- (1,0) [-32768|32767] ""  LVSS
- SG_ Start_6001_02 m2 : 32|1@1+ (1,0) [0|1] ""  LVSS
- SG_ Brake_6001_01 m1 : 32|16@1- (1,0) [0|494967295] ""  LVSS
- SG_ Forward_Enable_6001_00 m0 : 32|1@1+ (1,0) [0|494967295] ""  LVSS
- SG_ SubIndex_6001 m24577M : 24|8@1+ (1,0) [0|3] ""  LVSS
- SG_ Transmit_PDO_Mapping_Parame_0001 m4 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ Transmit_PDO_Mapping_Parame_0002 m3 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ PDOMapEntry_2_1A00_02 m2 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ PDOMapEntry_1_1A00_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ NrOfEntries_1_1A00_00 m0 : 32|8@1+ (1,0) [0|2] ""  LVSS
- SG_ SubIndex_1A00 m6656M : 24|8@1+ (1,0) [0|4] ""  LVSS
- SG_ SYNC_start_value_1800_06 m6 : 32|8@1+ (1,0) [0|255] ""  LVSS
- SG_ Event_Timer_1800_05 m5 : 32|16@1+ (1,0) [0|65535] ""  LVSS
- SG_ Compatibility_Entry_1800_04 m4 : 32|8@1+ (1,0) [0|255] ""  LVSS
- SG_ Inhibit_Time_1800_03 m3 : 32|16@1+ (1,0) [0|65535] ""  LVSS
- SG_ TransmissionType_1800_02 m2 : 32|8@1+ (1,0) [0|255] ""  LVSS
- SG_ COB_ID_1800_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ Highest_sub_index_supported_0000 m0 : 32|8@1+ (1,0) [2|6] ""  LVSS
- SG_ SubIndex_1800 m6144M : 24|8@1+ (1,0) [0|6] ""  LVSS
- SG_ Serial_number_1018_04 m4 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ Revision_number_1018_03 m3 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ Product_Code_1018_02 m2 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ Vendor_Id_1018_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ Highest_sub_index_supported_0001 m0 : 32|8@1+ (1,0) [1|4] ""  LVSS
- SG_ SubIndex_1018 m4120M : 24|8@1+ (1,0) [0|4] ""  LVSS
- SG_ Error_Register_1001 m0 : 32|8@1+ (1,0) [0|255] ""  LVSS
- SG_ SubIndex_1001 m4097M : 24|8@1+ (1,0) [0|0] ""  LVSS
- SG_ Device_Type_1000 m0 : 32|32@1+ (1,0) [0|4294967295] ""  LVSS
- SG_ SubIndex_1000 m4096M : 24|8@1+ (1,0) [0|0] ""  LVSS
- SG_ Index m1M : 8|16@1+ (1,0) [4096|24577] ""  LVSS
- SG_ TransferType m1M : 1|1@1+ (1,0) [0|1] ""  LVSS
- SG_ NotUsedBytes m1 : 2|2@1+ (1,0) [0|3] ""  LVSS
- SG_ SizeIndicator m1 : 0|1@1+ (1,0) [0|1] ""  LVSS
- SG_ CCS M : 5|3@1+ (1,0) [0|6] ""  LVSS
+ SG_ Harp_Bit_3_6002_03 m3 : 32|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Harp_Bit_2_6002_02 m2 : 32|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Harp_Bit_1_6002_01 m1 : 32|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Harp_Bit_0_6002_00 m0 : 32|1@1+ (1,0) [0|1] ""  VCU
+ SG_ SubIndex_6002 m24578M : 24|8@1+ (1,0) [0|3] ""  VCU
+ SG_ Throttle_6001_03 m3 : 32|16@1- (1,0) [-32768|32767] ""  VCU
+ SG_ Start_6001_02 m2 : 32|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Brake_6001_01 m1 : 32|16@1- (1,0) [0|494967295] ""  VCU
+ SG_ Forward_Enable_6001_00 m0 : 32|1@1+ (1,0) [0|494967295] ""  VCU
+ SG_ SubIndex_6001 m24577M : 24|8@1+ (1,0) [0|3] ""  VCU
+ SG_ Transmit_PDO_Mapping_Parame_0002 m4 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ PDOMapEntry_1A01_03 m3 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ PDOMapEntry_1A01_02 m2 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ PDOMapEntry_1A01_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ NrOfEntries_1_1A01_00 m0 : 32|8@1+ (1,0) [0|2] ""  VCU
+ SG_ SubIndex_1A01 m6657M : 24|8@1+ (1,0) [0|4] ""  VCU
+ SG_ Transmit_PDO_Mapping_Parame_0003 m4 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Transmit_PDO_Mapping_Parame_0004 m3 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ PDOMapEntry_2_1A00_02 m2 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ PDOMapEntry_1_1A00_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ NrOfEntries_1_1A00_00 m0 : 32|8@1+ (1,0) [0|2] ""  VCU
+ SG_ SubIndex_1A00 m6656M : 24|8@1+ (1,0) [0|4] ""  VCU
+ SG_ SYNC_start_value_1801_06 m6 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Event_Timer_1801_05 m5 : 32|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ Compatibility_Entry_1801_04 m4 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Inhibit_Time_1801_03 m3 : 32|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ TransmissionType_1801_02 m2 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ COB_ID_1801_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Highest_sub_index_supported_0000 m0 : 32|8@1+ (1,0) [2|6] ""  VCU
+ SG_ SubIndex_1801 m6145M : 24|8@1+ (1,0) [0|6] ""  VCU
+ SG_ SYNC_start_value_1800_06 m6 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Event_Timer_1800_05 m5 : 32|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ Compatibility_Entry_1800_04 m4 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Inhibit_Time_1800_03 m3 : 32|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ TransmissionType_1800_02 m2 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ COB_ID_1800_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Highest_sub_index_supported_0001 m0 : 32|8@1+ (1,0) [2|6] ""  VCU
+ SG_ SubIndex_1800 m6144M : 24|8@1+ (1,0) [0|6] ""  VCU
+ SG_ Serial_number_1018_04 m4 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Revision_number_1018_03 m3 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Product_Code_1018_02 m2 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Vendor_Id_1018_01 m1 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ Highest_sub_index_supported_0002 m0 : 32|8@1+ (1,0) [1|4] ""  VCU
+ SG_ SubIndex_1018 m4120M : 24|8@1+ (1,0) [0|4] ""  VCU
+ SG_ Error_Register_1001 m0 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ SubIndex_1001 m4097M : 24|8@1+ (1,0) [0|0] ""  VCU
+ SG_ Device_Type_1000 m0 : 32|32@1+ (1,0) [0|4294967295] ""  VCU
+ SG_ SubIndex_1000 m4096M : 24|8@1+ (1,0) [0|0] ""  VCU
+ SG_ Index m1M : 8|16@1+ (1,0) [4096|24578] ""  VCU
+ SG_ TransferType m1M : 1|1@1+ (1,0) [0|1] ""  VCU
+ SG_ NotUsedBytes m1 : 2|2@1+ (1,0) [0|3] ""  VCU
+ SG_ SizeIndicator m1 : 0|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CCS M : 5|3@1+ (1,0) [0|6] ""  VCU
 
-BO_ 136 EMCY_008: 8 LVSS
+BO_ 136 EMCY_008: 8 VCU
  SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -3218,8 +3256,14 @@ BO_ 2020 LSS_S: 8 Vector__XXX
 
 BO_ 1 GFC: 0 Vector__XXX
 
-BO_ 392 N8_TPDO0: 5 LVSS
- SG_ Throttle : 18|16@1- (1,0) [-32768|32767] "" Vector__XXX
+BO_ 648 N8_TPDO1: 1 VCU
+ SG_ Harp_Bit_3 : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Harp_Bit_2 : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Harp_Bit_1 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Harp_Bit_0 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 392 N8_TPDO0: 5 VCU
+ SG_ Throttle : 18|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ Start : 17|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Brake : 1|16@1- (1,0) [0|494967295] "" Vector__XXX
  SG_ Forward_Enable : 0|1@1+ (1,0) [0|494967295] "" Vector__XXX
@@ -3348,59 +3392,59 @@ BA_DEF_DEF_  "CANopenApplProfile" 301;
 BA_DEF_DEF_  "ProtocolType" "CANopen";
 BA_DEF_DEF_  "AUTOGENERATION" 0;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
-BA_ "OptionLoadDCF" 1;
-BA_ "GeneratedBy" "Vector ProCANopen";
-BA_ "CANopenApplProfile" 301;
-BA_ "ProtocolType" "CANopen";
 BA_ "AUTOGENERATION" 1;
-BA_ "CO_NVSEGMENT45" BU_ LVSS "";
-BA_ "CO_NVSEGMENT44" BU_ LVSS "";
-BA_ "CO_NVSEGMENT43" BU_ LVSS "";
-BA_ "CO_NVSEGMENT42" BU_ LVSS "";
-BA_ "CO_NVSEGMENT41" BU_ LVSS "";
-BA_ "CO_NVSEGMENT40" BU_ LVSS "";
-BA_ "CO_NVSEGMENT39" BU_ LVSS "";
-BA_ "CO_NVSEGMENT38" BU_ LVSS "";
-BA_ "CO_NVSEGMENT37" BU_ LVSS "";
-BA_ "CO_NVSEGMENT36" BU_ LVSS "";
-BA_ "CO_NVSEGMENT35" BU_ LVSS "";
-BA_ "CO_NVSEGMENT34" BU_ LVSS "";
-BA_ "CO_NVSEGMENT33" BU_ LVSS "";
-BA_ "CO_NVSEGMENT32" BU_ LVSS "";
-BA_ "CO_NVSEGMENT31" BU_ LVSS "";
-BA_ "CO_NVSEGMENT30" BU_ LVSS "";
-BA_ "CO_NVSEGMENT29" BU_ LVSS "";
-BA_ "CO_NVSEGMENT28" BU_ LVSS "";
-BA_ "CO_NVSEGMENT27" BU_ LVSS "";
-BA_ "CO_NVSEGMENT26" BU_ LVSS "";
-BA_ "CO_NVSEGMENT25" BU_ LVSS "";
-BA_ "CO_NVSEGMENT24" BU_ LVSS "";
-BA_ "CO_NVSEGMENT23" BU_ LVSS "";
-BA_ "CO_NVSEGMENT22" BU_ LVSS "";
-BA_ "CO_NVSEGMENT21" BU_ LVSS "";
-BA_ "CO_NVSEGMENT20" BU_ LVSS "";
-BA_ "CO_NVSEGMENT19" BU_ LVSS "";
-BA_ "CO_NVSEGMENT18" BU_ LVSS "";
-BA_ "CO_NVSEGMENT17" BU_ LVSS "";
-BA_ "CO_NVSEGMENT16" BU_ LVSS "";
-BA_ "CO_NVSEGMENT15" BU_ LVSS "";
-BA_ "CO_NVSEGMENT14" BU_ LVSS "";
-BA_ "CO_NVSEGMENT13" BU_ LVSS "";
-BA_ "CO_NVSEGMENT12" BU_ LVSS "";
-BA_ "CO_NVSEGMENT11" BU_ LVSS "";
-BA_ "CO_NVSEGMENT10" BU_ LVSS "";
-BA_ "CO_NVSEGMENT9" BU_ LVSS "";
-BA_ "CO_NVSEGMENT8" BU_ LVSS "";
-BA_ "CO_NVSEGMENT7" BU_ LVSS "";
-BA_ "CO_NVSEGMENT6" BU_ LVSS "";
-BA_ "CO_NVSEGMENT5" BU_ LVSS "";
-BA_ "CO_NVSEGMENT4" BU_ LVSS "";
-BA_ "CO_NVSEGMENT3" BU_ LVSS "";
-BA_ "CO_NVSEGMENT2" BU_ LVSS "";
-BA_ "CO_NVSEGMENT1" BU_ LVSS "";
-BA_ "CO_NVSEGMENT0" BU_ LVSS "";
-BA_ "CO_DCF" BU_ LVSS "..\D008.DCF";
-BA_ "CO_ID" BU_ LVSS 8;
+BA_ "ProtocolType" "CANopen";
+BA_ "CANopenApplProfile" 301;
+BA_ "GeneratedBy" "Vector ProCANopen";
+BA_ "OptionLoadDCF" 1;
+BA_ "CO_ID" BU_ VCU 8;
+BA_ "CO_DCF" BU_ VCU "..\D008.DCF";
+BA_ "CO_NVSEGMENT0" BU_ VCU "";
+BA_ "CO_NVSEGMENT1" BU_ VCU "";
+BA_ "CO_NVSEGMENT2" BU_ VCU "";
+BA_ "CO_NVSEGMENT3" BU_ VCU "";
+BA_ "CO_NVSEGMENT4" BU_ VCU "";
+BA_ "CO_NVSEGMENT5" BU_ VCU "";
+BA_ "CO_NVSEGMENT6" BU_ VCU "";
+BA_ "CO_NVSEGMENT7" BU_ VCU "";
+BA_ "CO_NVSEGMENT8" BU_ VCU "";
+BA_ "CO_NVSEGMENT9" BU_ VCU "";
+BA_ "CO_NVSEGMENT10" BU_ VCU "";
+BA_ "CO_NVSEGMENT11" BU_ VCU "";
+BA_ "CO_NVSEGMENT12" BU_ VCU "";
+BA_ "CO_NVSEGMENT13" BU_ VCU "";
+BA_ "CO_NVSEGMENT14" BU_ VCU "";
+BA_ "CO_NVSEGMENT15" BU_ VCU "";
+BA_ "CO_NVSEGMENT16" BU_ VCU "";
+BA_ "CO_NVSEGMENT17" BU_ VCU "";
+BA_ "CO_NVSEGMENT18" BU_ VCU "";
+BA_ "CO_NVSEGMENT19" BU_ VCU "";
+BA_ "CO_NVSEGMENT20" BU_ VCU "";
+BA_ "CO_NVSEGMENT21" BU_ VCU "";
+BA_ "CO_NVSEGMENT22" BU_ VCU "";
+BA_ "CO_NVSEGMENT23" BU_ VCU "";
+BA_ "CO_NVSEGMENT24" BU_ VCU "";
+BA_ "CO_NVSEGMENT25" BU_ VCU "";
+BA_ "CO_NVSEGMENT26" BU_ VCU "";
+BA_ "CO_NVSEGMENT27" BU_ VCU "";
+BA_ "CO_NVSEGMENT28" BU_ VCU "";
+BA_ "CO_NVSEGMENT29" BU_ VCU "";
+BA_ "CO_NVSEGMENT30" BU_ VCU "";
+BA_ "CO_NVSEGMENT31" BU_ VCU "";
+BA_ "CO_NVSEGMENT32" BU_ VCU "";
+BA_ "CO_NVSEGMENT33" BU_ VCU "";
+BA_ "CO_NVSEGMENT34" BU_ VCU "";
+BA_ "CO_NVSEGMENT35" BU_ VCU "";
+BA_ "CO_NVSEGMENT36" BU_ VCU "";
+BA_ "CO_NVSEGMENT37" BU_ VCU "";
+BA_ "CO_NVSEGMENT38" BU_ VCU "";
+BA_ "CO_NVSEGMENT39" BU_ VCU "";
+BA_ "CO_NVSEGMENT40" BU_ VCU "";
+BA_ "CO_NVSEGMENT41" BU_ VCU "";
+BA_ "CO_NVSEGMENT42" BU_ VCU "";
+BA_ "CO_NVSEGMENT43" BU_ VCU "";
+BA_ "CO_NVSEGMENT44" BU_ VCU "";
+BA_ "CO_NVSEGMENT45" BU_ VCU "";
 BA_ "CO_MsgCategory" BO_ 1800 505;
 BA_ "CO_MsgCategory" BO_ 1416 410;
 BA_ "CO_MsgCategory" BO_ 1544 405;
@@ -3915,18 +3959,37 @@ BA_ "CO_MsgCategory" BO_ 0 105;
 BA_ "CO_MsgCategory" BO_ 2021 610;
 BA_ "CO_MsgCategory" BO_ 2020 605;
 BA_ "CO_MsgCategory" BO_ 1 705;
+BA_ "CO_MsgCategory" BO_ 648 315;
 BA_ "CO_MsgCategory" BO_ 392 305;
+BA_ "GenSigStartValue" SG_ 1416 Harp_Bit_3_6002_03 0;
+BA_ "GenSigStartValue" SG_ 1416 Harp_Bit_2_6002_02 0;
+BA_ "GenSigStartValue" SG_ 1416 Harp_Bit_1_6002_01 0;
+BA_ "GenSigStartValue" SG_ 1416 Harp_Bit_0_6002_00 0;
 BA_ "GenSigStartValue" SG_ 1416 Throttle_6001_03 0;
 BA_ "GenSigStartValue" SG_ 1416 Start_6001_02 0;
 BA_ "GenSigStartValue" SG_ 1416 Brake_6001_01 0;
 BA_ "GenSigStartValue" SG_ 1416 Forward_Enable_6001_00 3;
-BA_ "GenSigStartValue" SG_ 1416 Transmit_PDO_Mapping_Parameter_0 1610679056;
-BA_ "SystemSignalLongSymbol" SG_ 1416 Transmit_PDO_Mapping_Parameter_0 "Transmit_PDO_Mapping_Parameter_0_sub4_1A00_04";
-BA_ "GenSigStartValue" SG_ 1416 Transmit_PDO_Mapping_Parame_0000 1610678785;
-BA_ "SystemSignalLongSymbol" SG_ 1416 Transmit_PDO_Mapping_Parame_0000 "Transmit_PDO_Mapping_Parameter_0_sub3_1A00_03";
+BA_ "GenSigStartValue" SG_ 1416 Transmit_PDO_Mapping_Parameter_0 1610744577;
+BA_ "SystemSignalLongSymbol" SG_ 1416 Transmit_PDO_Mapping_Parameter_0 "Transmit_PDO_Mapping_Parameter_0_sub4_1A01_04";
+BA_ "GenSigStartValue" SG_ 1416 PDOMapEntry_1A01_03 1610744321;
+BA_ "GenSigStartValue" SG_ 1416 PDOMapEntry_1A01_02 1610744065;
+BA_ "GenSigStartValue" SG_ 1416 PDOMapEntry_1A01_01 1610743809;
+BA_ "GenSigStartValue" SG_ 1416 NrOfEntries_1_1A01_00 4;
+BA_ "GenSigStartValue" SG_ 1416 Transmit_PDO_Mapping_Parame_0000 1610679056;
+BA_ "SystemSignalLongSymbol" SG_ 1416 Transmit_PDO_Mapping_Parame_0000 "Transmit_PDO_Mapping_Parameter_0_sub4_1A00_04";
+BA_ "GenSigStartValue" SG_ 1416 Transmit_PDO_Mapping_Parame_0001 1610678785;
+BA_ "SystemSignalLongSymbol" SG_ 1416 Transmit_PDO_Mapping_Parame_0001 "Transmit_PDO_Mapping_Parameter_0_sub3_1A00_03";
 BA_ "GenSigStartValue" SG_ 1416 PDOMapEntry_2_1A00_02 1610678529;
 BA_ "GenSigStartValue" SG_ 1416 PDOMapEntry_1_1A00_01 1610678273;
-BA_ "GenSigStartValue" SG_ 1416 NrOfEntries_1_1A00_00 4;
+BA_ "GenSigStartValue" SG_ 1416 NrOfEntries_1_1A00_00 8;
+BA_ "GenSigStartValue" SG_ 1416 SYNC_start_value_1801_06 0;
+BA_ "GenSigStartValue" SG_ 1416 Event_Timer_1801_05 0;
+BA_ "GenSigStartValue" SG_ 1416 Compatibility_Entry_1801_04 0;
+BA_ "GenSigStartValue" SG_ 1416 Inhibit_Time_1801_03 0;
+BA_ "GenSigStartValue" SG_ 1416 TransmissionType_1801_02 0;
+BA_ "GenSigStartValue" SG_ 1416 COB_ID_1801_01 648;
+BA_ "GenSigStartValue" SG_ 1416 Highest_sub_index_supported_1801 6;
+BA_ "SystemSignalLongSymbol" SG_ 1416 Highest_sub_index_supported_1801 "Highest_sub_index_supported_1801_00";
 BA_ "GenSigStartValue" SG_ 1416 SYNC_start_value_1800_06 0;
 BA_ "GenSigStartValue" SG_ 1416 Event_Timer_1800_05 0;
 BA_ "GenSigStartValue" SG_ 1416 Compatibility_Entry_1800_04 0;
@@ -3944,56 +4007,84 @@ BA_ "SystemSignalLongSymbol" SG_ 1416 Highest_sub_index_supported_1018 "Highest_
 BA_ "GenSigStartValue" SG_ 1416 Error_Register_1001 0;
 BA_ "GenSigStartValue" SG_ 1416 Device_Type_1000 419;
 BA_ "GenSigStartValue" SG_ 1416 Index 4096;
+BA_ "GenSigStartValue" SG_ 1544 Harp_Bit_3_6002_03 0;
+BA_ "GenSigStartValue" SG_ 1544 Harp_Bit_2_6002_02 0;
+BA_ "GenSigStartValue" SG_ 1544 Harp_Bit_1_6002_01 0;
+BA_ "GenSigStartValue" SG_ 1544 Harp_Bit_0_6002_00 0;
 BA_ "GenSigStartValue" SG_ 1544 Throttle_6001_03 0;
 BA_ "GenSigStartValue" SG_ 1544 Start_6001_02 0;
 BA_ "GenSigStartValue" SG_ 1544 Brake_6001_01 0;
 BA_ "GenSigStartValue" SG_ 1544 Forward_Enable_6001_00 3;
-BA_ "GenSigStartValue" SG_ 1544 Transmit_PDO_Mapping_Parame_0001 1610679056;
-BA_ "SystemSignalLongSymbol" SG_ 1544 Transmit_PDO_Mapping_Parame_0001 "Transmit_PDO_Mapping_Parameter_0_sub4_1A00_04";
-BA_ "GenSigStartValue" SG_ 1544 Transmit_PDO_Mapping_Parame_0002 1610678785;
-BA_ "SystemSignalLongSymbol" SG_ 1544 Transmit_PDO_Mapping_Parame_0002 "Transmit_PDO_Mapping_Parameter_0_sub3_1A00_03";
+BA_ "GenSigStartValue" SG_ 1544 Transmit_PDO_Mapping_Parame_0002 1610744577;
+BA_ "SystemSignalLongSymbol" SG_ 1544 Transmit_PDO_Mapping_Parame_0002 "Transmit_PDO_Mapping_Parameter_0_sub4_1A01_04";
+BA_ "GenSigStartValue" SG_ 1544 PDOMapEntry_1A01_03 1610744321;
+BA_ "GenSigStartValue" SG_ 1544 PDOMapEntry_1A01_02 1610744065;
+BA_ "GenSigStartValue" SG_ 1544 PDOMapEntry_1A01_01 1610743809;
+BA_ "GenSigStartValue" SG_ 1544 NrOfEntries_1_1A01_00 4;
+BA_ "GenSigStartValue" SG_ 1544 Transmit_PDO_Mapping_Parame_0003 1610679056;
+BA_ "SystemSignalLongSymbol" SG_ 1544 Transmit_PDO_Mapping_Parame_0003 "Transmit_PDO_Mapping_Parameter_0_sub4_1A00_04";
+BA_ "GenSigStartValue" SG_ 1544 Transmit_PDO_Mapping_Parame_0004 1610678785;
+BA_ "SystemSignalLongSymbol" SG_ 1544 Transmit_PDO_Mapping_Parame_0004 "Transmit_PDO_Mapping_Parameter_0_sub3_1A00_03";
 BA_ "GenSigStartValue" SG_ 1544 PDOMapEntry_2_1A00_02 1610678529;
 BA_ "GenSigStartValue" SG_ 1544 PDOMapEntry_1_1A00_01 1610678273;
-BA_ "GenSigStartValue" SG_ 1544 NrOfEntries_1_1A00_00 4;
+BA_ "GenSigStartValue" SG_ 1544 NrOfEntries_1_1A00_00 8;
+BA_ "GenSigStartValue" SG_ 1544 SYNC_start_value_1801_06 0;
+BA_ "GenSigStartValue" SG_ 1544 Event_Timer_1801_05 0;
+BA_ "GenSigStartValue" SG_ 1544 Compatibility_Entry_1801_04 0;
+BA_ "GenSigStartValue" SG_ 1544 Inhibit_Time_1801_03 0;
+BA_ "GenSigStartValue" SG_ 1544 TransmissionType_1801_02 0;
+BA_ "GenSigStartValue" SG_ 1544 COB_ID_1801_01 648;
+BA_ "GenSigStartValue" SG_ 1544 Highest_sub_index_supported_0000 6;
+BA_ "SystemSignalLongSymbol" SG_ 1544 Highest_sub_index_supported_0000 "Highest_sub_index_supported_1801_00";
 BA_ "GenSigStartValue" SG_ 1544 SYNC_start_value_1800_06 0;
 BA_ "GenSigStartValue" SG_ 1544 Event_Timer_1800_05 0;
 BA_ "GenSigStartValue" SG_ 1544 Compatibility_Entry_1800_04 0;
 BA_ "GenSigStartValue" SG_ 1544 Inhibit_Time_1800_03 0;
 BA_ "GenSigStartValue" SG_ 1544 TransmissionType_1800_02 0;
 BA_ "GenSigStartValue" SG_ 1544 COB_ID_1800_01 392;
-BA_ "GenSigStartValue" SG_ 1544 Highest_sub_index_supported_0000 6;
-BA_ "SystemSignalLongSymbol" SG_ 1544 Highest_sub_index_supported_0000 "Highest_sub_index_supported_1800_00";
+BA_ "GenSigStartValue" SG_ 1544 Highest_sub_index_supported_0001 6;
+BA_ "SystemSignalLongSymbol" SG_ 1544 Highest_sub_index_supported_0001 "Highest_sub_index_supported_1800_00";
 BA_ "GenSigStartValue" SG_ 1544 Serial_number_1018_04 0;
 BA_ "GenSigStartValue" SG_ 1544 Revision_number_1018_03 0;
 BA_ "GenSigStartValue" SG_ 1544 Product_Code_1018_02 0;
 BA_ "GenSigStartValue" SG_ 1544 Vendor_Id_1018_01 0;
-BA_ "GenSigStartValue" SG_ 1544 Highest_sub_index_supported_0001 4;
-BA_ "SystemSignalLongSymbol" SG_ 1544 Highest_sub_index_supported_0001 "Highest_sub_index_supported_1018_00";
+BA_ "GenSigStartValue" SG_ 1544 Highest_sub_index_supported_0002 4;
+BA_ "SystemSignalLongSymbol" SG_ 1544 Highest_sub_index_supported_0002 "Highest_sub_index_supported_1018_00";
 BA_ "GenSigStartValue" SG_ 1544 Error_Register_1001 0;
 BA_ "GenSigStartValue" SG_ 1544 Device_Type_1000 419;
 BA_ "GenSigStartValue" SG_ 1544 Index 4096;
+BA_ "GenSigStartValue" SG_ 648 Harp_Bit_3 0;
+BA_ "GenSigStartValue" SG_ 648 Harp_Bit_2 0;
+BA_ "GenSigStartValue" SG_ 648 Harp_Bit_1 0;
+BA_ "GenSigStartValue" SG_ 648 Harp_Bit_0 0;
 BA_ "GenSigStartValue" SG_ 392 Throttle 0;
 BA_ "GenSigStartValue" SG_ 392 Start 0;
 BA_ "GenSigStartValue" SG_ 392 Brake 0;
 BA_ "GenSigStartValue" SG_ 392 Forward_Enable 0;
 VAL_ 1800 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
+VAL_ 1416 SubIndex_6002 3 "Harp Bit 3" 2 "Harp Bit 2" 1 "Harp Bit 1" 0 "Harp Bit 0" ;
 VAL_ 1416 SubIndex_6001 3 "Throttle" 2 "Start" 1 "Brake" 0 "Forward_Enable" ;
+VAL_ 1416 SubIndex_1A01 4 "Transmit PDO Mapping Parameter 0_sub4" 3 "PDOMapEntry" 0 "NrOfEntries_1" ;
 VAL_ 1416 SubIndex_1A00 4 "Transmit PDO Mapping Parameter 0_sub4" 3 "Transmit PDO Mapping Parameter 0_sub3" 2 "PDOMapEntry_2" 1 "PDOMapEntry_1" 0 "NrOfEntries_1" ;
+VAL_ 1416 SubIndex_1801 6 "SYNC start value" 5 "Event Timer" 4 "Compatibility Entry" 3 "Inhibit Time" 2 "TransmissionType" 1 "COB-ID" 0 "Highest sub-index supported" ;
 VAL_ 1416 SubIndex_1800 6 "SYNC start value" 5 "Event Timer" 4 "Compatibility Entry" 3 "Inhibit Time" 2 "TransmissionType" 1 "COB-ID" 0 "Highest sub-index supported" ;
 VAL_ 1416 SubIndex_1018 4 "Serial number" 3 "Revision number" 2 "Product Code" 1 "Vendor Id" 0 "Highest sub-index supported" ;
 VAL_ 1416 SubIndex_1001 0 "Error Register" ;
 VAL_ 1416 SubIndex_1000 0 "Device Type" ;
-VAL_ 1416 Index 24577 "LVSS signals" 6656 "Transmit PDO Mapping Parameter 0" 6144 "Transmit PDO Communication Parameter 0" 4120 "Identity Object" 4097 "Error Register" 4096 "Device Type" ;
+VAL_ 1416 Index 24578 "receive_data_buffer" 24577 "LVSS signals" 6657 "Transmit PDO Mapping Parameter 0" 6145 "Transmit PDO Communication Parameter 0" 4120 "Identity Object" 4097 "Error Register" 4096 "Device Type" ;
 VAL_ 1416 TransferType 1 "Expedited transfer" 0 "Normal transfer" ;
 VAL_ 1416 SizeIndicator 1 "Size is indicated" 0 "Size is not indicated" ;
 VAL_ 1416 SCS 2 "Upload" 1 "Download" ;
+VAL_ 1544 SubIndex_6002 3 "Harp Bit 3" 2 "Harp Bit 2" 1 "Harp Bit 1" 0 "Harp Bit 0" ;
 VAL_ 1544 SubIndex_6001 3 "Throttle" 2 "Start" 1 "Brake" 0 "Forward_Enable" ;
+VAL_ 1544 SubIndex_1A01 4 "Transmit PDO Mapping Parameter 0_sub4" 3 "PDOMapEntry" 0 "NrOfEntries_1" ;
 VAL_ 1544 SubIndex_1A00 4 "Transmit PDO Mapping Parameter 0_sub4" 3 "Transmit PDO Mapping Parameter 0_sub3" 2 "PDOMapEntry_2" 1 "PDOMapEntry_1" 0 "NrOfEntries_1" ;
+VAL_ 1544 SubIndex_1801 6 "SYNC start value" 5 "Event Timer" 4 "Compatibility Entry" 3 "Inhibit Time" 2 "TransmissionType" 1 "COB-ID" 0 "Highest sub-index supported" ;
 VAL_ 1544 SubIndex_1800 6 "SYNC start value" 5 "Event Timer" 4 "Compatibility Entry" 3 "Inhibit Time" 2 "TransmissionType" 1 "COB-ID" 0 "Highest sub-index supported" ;
 VAL_ 1544 SubIndex_1018 4 "Serial number" 3 "Revision number" 2 "Product Code" 1 "Vendor Id" 0 "Highest sub-index supported" ;
 VAL_ 1544 SubIndex_1001 0 "Error Register" ;
 VAL_ 1544 SubIndex_1000 0 "Device Type" ;
-VAL_ 1544 Index 24577 "LVSS signals" 6656 "Transmit PDO Mapping Parameter 0" 6144 "Transmit PDO Communication Parameter 0" 4120 "Identity Object" 4097 "Error Register" 4096 "Device Type" ;
+VAL_ 1544 Index 24578 "receive_data_buffer" 24577 "LVSS signals" 6657 "Transmit PDO Mapping Parameter 0" 6145 "Transmit PDO Communication Parameter 0" 4120 "Identity Object" 4097 "Error Register" 4096 "Device Type" ;
 VAL_ 1544 TransferType 1 "Expedited transfer" 0 "Normal transfer" ;
 VAL_ 1544 SizeIndicator 1 "Size is indicated" 0 "Size is not indicated" ;
 VAL_ 1544 CCS 2 "Upload" 1 "Download" ;
@@ -4124,7 +4215,7 @@ VAL_ 1796 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1795 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1794 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1793 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
-VAL_ 0 Node_ID 8 "LVSS" 0 "All" ;
+VAL_ 0 Node_ID 8 "VCU" 0 "All" ;
 VAL_ 0 CS 130 "Reset Communication" 129 "Reset Node" 128 "Enter Pre-Operational" 2 "Stop" 1 "Start" ;
 VAL_ 2021 LSS_TableIndex 8 "10" 7 "20" 6 "50" 5 "100" 4 "125" 3 "250" 2 "500" 1 "800" 0 "1000" ;
 VAL_ 2021 LSS_TableSelector 0 "Std_CiA_Table" ;
@@ -4135,17 +4226,36 @@ VAL_ 2020 LSS_CfgBitTim_ErrCode 255 "Impl_spec_error" 1 "Not_supported" 0 "Succe
 VAL_ 2020 LSS_CfgNodeID_ErrCode 255 "Impl_spec_error" 1 "NodeID_Out_Of_Range" 0 "Success" ;
 VAL_ 2020 LSS_S_CS 94 "InquireNodeID" 93 "InquireSerial" 92 "InquireRevision" 91 "InquireProduct" 90 "InquireVendor" 76 "IdentifyNonConfSlave" 79 "IdentifySlave" 23 "StoreConfiguration" 19 "ConfigureBitTiming" 17 "ConfigureNodeID" 68 "SwitchModeSelectConfirm" ;
 
+SG_MUL_VAL_ 1416 Harp_Bit_3_6002_03 SubIndex_6002 3-3;
+SG_MUL_VAL_ 1416 Harp_Bit_2_6002_02 SubIndex_6002 2-2;
+SG_MUL_VAL_ 1416 Harp_Bit_1_6002_01 SubIndex_6002 1-1;
+SG_MUL_VAL_ 1416 Harp_Bit_0_6002_00 SubIndex_6002 0-0;
+SG_MUL_VAL_ 1416 SubIndex_6002 Index 24578-24578;
 SG_MUL_VAL_ 1416 Throttle_6001_03 SubIndex_6001 3-3;
 SG_MUL_VAL_ 1416 Start_6001_02 SubIndex_6001 2-2;
 SG_MUL_VAL_ 1416 Brake_6001_01 SubIndex_6001 1-1;
 SG_MUL_VAL_ 1416 Forward_Enable_6001_00 SubIndex_6001 0-0;
 SG_MUL_VAL_ 1416 SubIndex_6001 Index 24577-24577;
-SG_MUL_VAL_ 1416 Transmit_PDO_Mapping_Parameter_0 SubIndex_1A00 4-4;
-SG_MUL_VAL_ 1416 Transmit_PDO_Mapping_Parame_0000 SubIndex_1A00 3-3;
+SG_MUL_VAL_ 1416 Transmit_PDO_Mapping_Parameter_0 SubIndex_1A01 4-4;
+SG_MUL_VAL_ 1416 PDOMapEntry_1A01_03 SubIndex_1A01 3-3;
+SG_MUL_VAL_ 1416 PDOMapEntry_1A01_02 SubIndex_1A01 2-2;
+SG_MUL_VAL_ 1416 PDOMapEntry_1A01_01 SubIndex_1A01 1-1;
+SG_MUL_VAL_ 1416 NrOfEntries_1_1A01_00 SubIndex_1A01 0-0;
+SG_MUL_VAL_ 1416 SubIndex_1A01 Index 6657-6657;
+SG_MUL_VAL_ 1416 Transmit_PDO_Mapping_Parame_0000 SubIndex_1A00 4-4;
+SG_MUL_VAL_ 1416 Transmit_PDO_Mapping_Parame_0001 SubIndex_1A00 3-3;
 SG_MUL_VAL_ 1416 PDOMapEntry_2_1A00_02 SubIndex_1A00 2-2;
 SG_MUL_VAL_ 1416 PDOMapEntry_1_1A00_01 SubIndex_1A00 1-1;
 SG_MUL_VAL_ 1416 NrOfEntries_1_1A00_00 SubIndex_1A00 0-0;
 SG_MUL_VAL_ 1416 SubIndex_1A00 Index 6656-6656;
+SG_MUL_VAL_ 1416 SYNC_start_value_1801_06 SubIndex_1801 6-6;
+SG_MUL_VAL_ 1416 Event_Timer_1801_05 SubIndex_1801 5-5;
+SG_MUL_VAL_ 1416 Compatibility_Entry_1801_04 SubIndex_1801 4-4;
+SG_MUL_VAL_ 1416 Inhibit_Time_1801_03 SubIndex_1801 3-3;
+SG_MUL_VAL_ 1416 TransmissionType_1801_02 SubIndex_1801 2-2;
+SG_MUL_VAL_ 1416 COB_ID_1801_01 SubIndex_1801 1-1;
+SG_MUL_VAL_ 1416 Highest_sub_index_supported_1801 SubIndex_1801 0-0;
+SG_MUL_VAL_ 1416 SubIndex_1801 Index 6145-6145;
 SG_MUL_VAL_ 1416 SYNC_start_value_1800_06 SubIndex_1800 6-6;
 SG_MUL_VAL_ 1416 Event_Timer_1800_05 SubIndex_1800 5-5;
 SG_MUL_VAL_ 1416 Compatibility_Entry_1800_04 SubIndex_1800 4-4;
@@ -4168,30 +4278,49 @@ SG_MUL_VAL_ 1416 Index TransferType 1-1;
 SG_MUL_VAL_ 1416 TransferType SCS 1-2;
 SG_MUL_VAL_ 1416 NotUsedBytes SCS 1-2;
 SG_MUL_VAL_ 1416 SizeIndicator SCS 1-2;
+SG_MUL_VAL_ 1544 Harp_Bit_3_6002_03 SubIndex_6002 3-3;
+SG_MUL_VAL_ 1544 Harp_Bit_2_6002_02 SubIndex_6002 2-2;
+SG_MUL_VAL_ 1544 Harp_Bit_1_6002_01 SubIndex_6002 1-1;
+SG_MUL_VAL_ 1544 Harp_Bit_0_6002_00 SubIndex_6002 0-0;
+SG_MUL_VAL_ 1544 SubIndex_6002 Index 24578-24578;
 SG_MUL_VAL_ 1544 Throttle_6001_03 SubIndex_6001 3-3;
 SG_MUL_VAL_ 1544 Start_6001_02 SubIndex_6001 2-2;
 SG_MUL_VAL_ 1544 Brake_6001_01 SubIndex_6001 1-1;
 SG_MUL_VAL_ 1544 Forward_Enable_6001_00 SubIndex_6001 0-0;
 SG_MUL_VAL_ 1544 SubIndex_6001 Index 24577-24577;
-SG_MUL_VAL_ 1544 Transmit_PDO_Mapping_Parame_0001 SubIndex_1A00 4-4;
-SG_MUL_VAL_ 1544 Transmit_PDO_Mapping_Parame_0002 SubIndex_1A00 3-3;
+SG_MUL_VAL_ 1544 Transmit_PDO_Mapping_Parame_0002 SubIndex_1A01 4-4;
+SG_MUL_VAL_ 1544 PDOMapEntry_1A01_03 SubIndex_1A01 3-3;
+SG_MUL_VAL_ 1544 PDOMapEntry_1A01_02 SubIndex_1A01 2-2;
+SG_MUL_VAL_ 1544 PDOMapEntry_1A01_01 SubIndex_1A01 1-1;
+SG_MUL_VAL_ 1544 NrOfEntries_1_1A01_00 SubIndex_1A01 0-0;
+SG_MUL_VAL_ 1544 SubIndex_1A01 Index 6657-6657;
+SG_MUL_VAL_ 1544 Transmit_PDO_Mapping_Parame_0003 SubIndex_1A00 4-4;
+SG_MUL_VAL_ 1544 Transmit_PDO_Mapping_Parame_0004 SubIndex_1A00 3-3;
 SG_MUL_VAL_ 1544 PDOMapEntry_2_1A00_02 SubIndex_1A00 2-2;
 SG_MUL_VAL_ 1544 PDOMapEntry_1_1A00_01 SubIndex_1A00 1-1;
 SG_MUL_VAL_ 1544 NrOfEntries_1_1A00_00 SubIndex_1A00 0-0;
 SG_MUL_VAL_ 1544 SubIndex_1A00 Index 6656-6656;
+SG_MUL_VAL_ 1544 SYNC_start_value_1801_06 SubIndex_1801 6-6;
+SG_MUL_VAL_ 1544 Event_Timer_1801_05 SubIndex_1801 5-5;
+SG_MUL_VAL_ 1544 Compatibility_Entry_1801_04 SubIndex_1801 4-4;
+SG_MUL_VAL_ 1544 Inhibit_Time_1801_03 SubIndex_1801 3-3;
+SG_MUL_VAL_ 1544 TransmissionType_1801_02 SubIndex_1801 2-2;
+SG_MUL_VAL_ 1544 COB_ID_1801_01 SubIndex_1801 1-1;
+SG_MUL_VAL_ 1544 Highest_sub_index_supported_0000 SubIndex_1801 0-0;
+SG_MUL_VAL_ 1544 SubIndex_1801 Index 6145-6145;
 SG_MUL_VAL_ 1544 SYNC_start_value_1800_06 SubIndex_1800 6-6;
 SG_MUL_VAL_ 1544 Event_Timer_1800_05 SubIndex_1800 5-5;
 SG_MUL_VAL_ 1544 Compatibility_Entry_1800_04 SubIndex_1800 4-4;
 SG_MUL_VAL_ 1544 Inhibit_Time_1800_03 SubIndex_1800 3-3;
 SG_MUL_VAL_ 1544 TransmissionType_1800_02 SubIndex_1800 2-2;
 SG_MUL_VAL_ 1544 COB_ID_1800_01 SubIndex_1800 1-1;
-SG_MUL_VAL_ 1544 Highest_sub_index_supported_0000 SubIndex_1800 0-0;
+SG_MUL_VAL_ 1544 Highest_sub_index_supported_0001 SubIndex_1800 0-0;
 SG_MUL_VAL_ 1544 SubIndex_1800 Index 6144-6144;
 SG_MUL_VAL_ 1544 Serial_number_1018_04 SubIndex_1018 4-4;
 SG_MUL_VAL_ 1544 Revision_number_1018_03 SubIndex_1018 3-3;
 SG_MUL_VAL_ 1544 Product_Code_1018_02 SubIndex_1018 2-2;
 SG_MUL_VAL_ 1544 Vendor_Id_1018_01 SubIndex_1018 1-1;
-SG_MUL_VAL_ 1544 Highest_sub_index_supported_0001 SubIndex_1018 0-0;
+SG_MUL_VAL_ 1544 Highest_sub_index_supported_0002 SubIndex_1018 0-0;
 SG_MUL_VAL_ 1544 SubIndex_1018 Index 4120-4120;
 SG_MUL_VAL_ 1544 Error_Register_1001 SubIndex_1001 0-0;
 SG_MUL_VAL_ 1544 SubIndex_1001 Index 4097-4097;
